@@ -1,0 +1,22 @@
+{
+  "name": "otternonesenses.co.za",
+  "version": "1.0.0",
+  "description": "the otternonesenses site",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otternonesenses-co-za/otternonesenses.co.za.git"
+  },
+  "author": "Ciaran jg Otter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/otternonesenses-co-za/otternonesenses.co.za/issues"
+  },
+  "homepage": "https://github.com/otternonesenses-co-za/otternonesenses.co.za#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
