@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
     console.log('a user connected');
+
+    io.on('disconnect', (socket) => {
+        console.log("a user disconnected");
+    })
 })
 
 server.listen(3000, () => {
