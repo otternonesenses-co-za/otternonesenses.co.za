@@ -36,7 +36,10 @@
         let input = document.getElementById('input');
 
         socket.on('connection', (messages) => {
-            console.log(messages);
+            messages.forEach(element => {
+                io.emit('chat message', element);
+            });
+            
         })
         let name = prompt("What should we call you?");
 
