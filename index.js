@@ -8,7 +8,7 @@ const app = express();
 const http = require('http');
 const server = http.createServer(app);
 
-const Account = require('classes/account.js');
+import Account from 'classes/account.js';
 
 let p1 = new Account("server");
 
