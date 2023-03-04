@@ -12,7 +12,7 @@ const { Server } = require('socket.io');
 const io = new Server(server);
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + "/index.html");
+  res.sendFile(__dirname + "/chat.html");
 });
 
 io.on('connection', (socket) => {
@@ -33,5 +33,5 @@ io.on('connection', (socket) => {
 })
 
 server.listen(3000, () => {
-  console.log('listening on *:3000');
+  console.log('listening on */chat.html:3000');
 });
