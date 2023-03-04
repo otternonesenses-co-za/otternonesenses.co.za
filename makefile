@@ -3,17 +3,17 @@ all: update
 add:
 	git add .
 
-commit: 
+commit:
 	git commit -m "update"
 
-push: 
+push:
 	git push
+
+run:
+	git pull 
+	node server/server.js
 
 update:
 	make add
 	make commit
 	make push
-server:
-	git pull
-	node index.js
-
