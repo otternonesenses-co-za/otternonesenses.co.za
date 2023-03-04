@@ -35,6 +35,13 @@
         let form = document.getElementById('form');
         let input = document.getElementById('input');
 
+        socket.on('connection', (messages) => {
+            console.log(messages);
+        })
+        let name = prompt("What should we call you?");
+
+         
+
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             if (input.value) {

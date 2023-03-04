@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
     console.log('a user connected');
+    socket.emit('connection', messages);
 
     socket.on('chat message', (msg) => {
         messages.push(msg);
@@ -31,11 +32,6 @@ io.on('connection', (socket) => {
     socket.on('disconnect', (socket) => {
         console.log("a user disconnected");
     });
-
-
-    socket.on('chat message', (msg) => {
-        console.log('Message: ' + msg);
-    })
 })
 
 server.listen(3000, () => {
