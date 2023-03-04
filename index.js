@@ -8,7 +8,11 @@ const app = express();
 const http = require('http');
 const server = http.createServer(app);
 
+let messages = [];
+
+
 const { Server } = require('socket.io');
+const { measureMemory } = require('vm');
 const io = new Server(server);
 
 app.get('/', (req, res) => {
@@ -19,7 +23,9 @@ io.on('connection', (socket) => {
     console.log('a user connected');
 
     socket.on('chat message', (msg) => {
+        messages.push(msg);
         io.emit("chat message", msg);
+        console.log(messages);
     })
 
     socket.on('disconnect', (socket) => {
