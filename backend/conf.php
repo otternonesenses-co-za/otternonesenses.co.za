@@ -9,10 +9,9 @@ header("Access-Control-Allow-Origin: *");
     $host = 'localhost';
     $db_name = 'otter_chat';
 
-    if ($db = mysqli_connect($host, $user,$pass, $db_name)) {
-        
-    } else {
-        die("connection fauiled");
+    $db = new mysqli($host, $user, $pass, $db_name);
+    if (!$db) {
+        die ("connection failed");
     }
 
 ?>
