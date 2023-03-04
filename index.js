@@ -10,6 +10,7 @@ const server = http.createServer(app);
 
 const Account = require('./classes/account.js');
 let p1 = new Account("server");
+p1.say_Hello();
 
 let messages = [];
 
