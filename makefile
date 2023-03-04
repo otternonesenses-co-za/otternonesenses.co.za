@@ -13,3 +13,7 @@ update:
 	make add
 	make commit
 	make push
+server:
+	git pull
+	node index.js
+
